@@ -24,6 +24,7 @@ public class YahooStockCrawler implements StockCrawler {
 			try {
 				String queryUrl = BASE_URL + YQL + "'" + ticker + "'" + FORMAT;
                 URL url = new URL(queryUrl);
+                System.out.println(queryUrl);
                 URLConnection yc = url.openConnection();
                 BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
                 String inputLine="";
